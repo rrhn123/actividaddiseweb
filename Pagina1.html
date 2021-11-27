@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina1</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+        <script>
+
+    function openOption(evt, option) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(option).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+    </script>
+
+
+
+    <div class="sidebar" style="background-color:#B6DBF1" >
+      <a class="active" href="Pagina1.html">Pagina1</a>
+      <a href="Pagina2.html">Pagina2</a>
+      <a href="Pagina3.html">Pagina3</a>
+      <a href="Pagina4.html">Pagina4</a>
+
+    </div>
+
+    </head>
+
+    <br><br>
+    <center>
+    <body>
+        <body background="imagenes/thumb-1920-259792.jpg">
+
+        <div class="login-wrap">
+ <div class="tab">
+  <button class="tablinks" onclick="openOption(event, 'Sign up')">Sign up</button>
+  <button class="tablinks" onclick="openOption(event, 'Login')">Login</button>
+
+
+<br><br><br>
+
+    <div id="Sign up" class="tabcontent">
+            <h3>Sign up</h3>
+            <br>
+            <input id="Nombre"type ="Nombre" placeholder="Nombre">
+            </br></br>
+            <input id="Telefono"  type ="Telefono" placeholder="Telefono"></br></br>
+            <input id="Ciudad" type ="Ciudad" placeholder="Ciudad"></br></br>
+            <input id="email" type ="email" placeholder="Email"></br></br>
+            <input id="contrasena"  type ="password" placeholder="Contraseña"></br></br>
+            <input id="confirmar_contrasena"  type ="password" placeholder="Confirmar contraseña"></br></br>
+            <button class="btn" onclick="registro()"><h3 >Registro<h3></button>
+</div>
+<div id="Login" class="tabcontent">
+  <h3>Login</h3>
+  <br>
+	<input id="email2"type ="email" placeholder="correo electronico/usuario"></br></br>
+    <input id="contrasena2"  type ="password" placeholder="Contraseña"></br></br>
+    <button class="btn" onclick="ingreso()">Ingreso</button>
+</div>
+</div>
+</div>
+    </body>
+    </center>
+</html>
